@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  # MySQL Database Service
+  mysql:
+    image: mysql:8.0
+    container_name: astroturf-mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: astroturf
+      MYSQL_ROOT_PASSWORD: password123
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - astroturf-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-ppassword123"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Spring Boot Application Service
+  api:
+    build: .
+    container_name: astroturf-api
+    restart: always
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - MYSQL_ROOT_PASSWORD=password123
+      - SPRING_DATASOURCE_HIKARI_INITIALIZATION_FAIL_TIMEOUT=60000
+    ports:
+      - "8080:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - astroturf-network
+
+networks:
+  astroturf-network:
+    driver: bridge
+
+volumes:
+  mysql-data:
