@@ -30,7 +30,6 @@ public class TournamentServiceImpl implements TournamentService {
     public TournamentDTO createTournament(TournamentDTO tournamentDTO) {
         Tournament tournament = mapToEntity(tournamentDTO);
 
-        // Process participant members if they exist
         if (tournamentDTO.getParticipantIds() != null && !tournamentDTO.getParticipantIds().isEmpty()) {
             Set<Member> participants = new HashSet<>();
             for (Long memberId : tournamentDTO.getParticipantIds()) {
@@ -70,7 +69,6 @@ public class TournamentServiceImpl implements TournamentService {
         tournament.setEntryFee(tournamentDTO.getEntryFee());
         tournament.setCashPrize(tournamentDTO.getCashPrize());
 
-        // Update participants if provided
         if (tournamentDTO.getParticipantIds() != null) {
             Set<Member> participants = new HashSet<>();
             for (Long memberId : tournamentDTO.getParticipantIds()) {
