@@ -2,7 +2,6 @@ package com.astroturf.astroturf.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import jakarta.validation.constraints.Email;
