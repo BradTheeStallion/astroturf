@@ -1,0 +1,7 @@
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "java -jar app.jar --spring.profiles.active=prod"
+healthcheckPath = "/"
+healthcheckTimeout = 300
