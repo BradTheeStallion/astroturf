@@ -4,8 +4,8 @@ builder = "NIXPACKS"
 [deploy]
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 5
-healthcheckPath = "/"
-healthcheckTimeout = 120
+#healthcheckPath = "/"
+#healthcheckTimeout = 120
 
 [deploy.envs]
 DATABASE_URL = "${RAILWAY_DATABASE_URL}"
