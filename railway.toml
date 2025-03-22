@@ -4,7 +4,7 @@ builder = "NIXPACKS"
 [deploy]
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 5
-healthcheckPath = "/actuator/health"
+healthcheckPath = "/"
 healthcheckTimeout = 120
 
 [deploy.envs]
