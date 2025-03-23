@@ -5,12 +5,9 @@ RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:21-jre
 WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/target/astroturf-0.0.1-SNAPSHOT.jar app.jar
 
-# Use a more reliable method to get wait-for-it.sh
-RUN apt-get update && apt-get install -y wget
-RUN wget https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh -O /wait-for-it.sh
-RUN chmod +x /wait-for-it.sh
-
+# Remove wait-for-it script as Railway manages service dependencies
 EXPOSE 8080
-CMD ["/bin/bash", "-c", "/wait-for-it.sh ${DATABASE_HOST:-mysql}:${DATABASE_PORT:-3306} -t 60 && java -jar app.jar"]
+# Increase JVM memory and add connection retry parameters
+CMD ["java", "-Xmx512m", "-jar", "app.jar", "--spring.datasource.hikari.connection-timeout=120000", "--spring.datasource.hikari.maximum-pool-size=5"]
