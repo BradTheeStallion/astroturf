@@ -13,4 +13,4 @@ RUN wget https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for
 RUN chmod +x /wait-for-it.sh
 
 EXPOSE 8080
-CMD ["/bin/bash", "-c", "/wait-for-it.sh ${DATABASE_HOST:-mysql}:${DATABASE_PORT:-3306} -t 60 && java -jar app.jar"]
+CMD ["/bin/bash", "-c", "/wait-for-it.sh ${DATABASE_HOST:-localhost}:${DATABASE_PORT:-3306} -t 60 && java -jar app.jar"]

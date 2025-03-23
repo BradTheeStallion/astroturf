@@ -1,5 +1,4 @@
 services:
-  # MySQL Database Service
   mysql:
     image: mysql:8.0
     container_name: astroturf-mysql
@@ -19,15 +18,13 @@ services:
       timeout: 5s
       retries: 5
 
-  # Spring Boot Application Service
   api:
     build: .
     container_name: astroturf-api
     restart: always
     environment:
-      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_PROFILES_ACTIVE=dev
       - MYSQL_ROOT_PASSWORD=password123
-      - SPRING_DATASOURCE_HIKARI_INITIALIZATION_FAIL_TIMEOUT=60000
     ports:
       - "8080:8080"
     depends_on:
