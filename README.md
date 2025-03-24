@@ -9,15 +9,19 @@ The app is configured to run on localhost:8080 when deployed locally (instructio
 Please accept my appologies for any lagging on the live version. Free database and API hosting comes with a price.
 
 ## Instructions for Local Deployment<br>
-1: [Clone the repository in IntelliJ](https://www.jetbrains.com/guide/tips/clone-from-github/).<br>
-2: Run the following docker commands:<br>
-*Build the docker containers*<br>
-docker-compose build<br>
-*Start the application*<br>
-docker-compose up -d<br>
-3: Try some of these [API endpoints](https://github.com/user-attachments/files/19439234/AstroTurf.API.Documentation.pdf) out in [Postman](https://www.postman.com/downloads/).<br>
+1: [Clone the repository in IntelliJ](https://www.jetbrains.com/guide/tips/clone-from-github/).
+
+2: Run the following docker commands:
+
+<&nbsp><&nbsp>*Build the docker containers*<br>
+<&nbsp><&nbsp>docker-compose build<br>
+<&nbsp><&nbsp>*Start the application*<br>
+<&nbsp><&nbsp>docker-compose up -d
+
+3: Try some of these [API endpoints](https://github.com/user-attachments/files/19439234/AstroTurf.API.Documentation.pdf) out in [Postman](https://www.postman.com/downloads/).
+
 4: Stop the app with the following command:<br>
-docker-compose down<br>
+docker-compose down
 
 ## <ins>Postman Photoshoot</ins>
 
