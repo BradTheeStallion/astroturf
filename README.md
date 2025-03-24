@@ -13,10 +13,10 @@ Please accept my appologies for any lagging on the live version. Free database a
 
 2: Run the following docker commands:
 
-<&nbsp><&nbsp>*Build the docker containers*<br>
-<&nbsp><&nbsp>docker-compose build<br>
-<&nbsp><&nbsp>*Start the application*<br>
-<&nbsp><&nbsp>docker-compose up -d
+<&nbsp;><&nbsp;>*Build the docker containers*<br>
+<&nbsp;><&nbsp;>docker-compose build<br>
+<&nbsp;><&nbsp;>*Start the application*<br>
+<&nbsp;><&nbsp;>docker-compose up -d
 
 3: Try some of these [API endpoints](https://github.com/user-attachments/files/19439234/AstroTurf.API.Documentation.pdf) out in [Postman](https://www.postman.com/downloads/).
 
