@@ -6,7 +6,8 @@
 
 This project is primarily a Java backend, configuring a REST API to interact with a MySQL database. The project is also Dockerized for ease of deployment.<br>
 The app is configured to run on localhost:8080 when deployed locally (instructions below), but please feel free to check out the deployed version on my [portfolio](https://bradtheestallion.github.io/portfolio).<br>
-Please accept my appologies for any lagging on the live version. Free database and API hosting comes with a price.
+Please accept my appologies for any lagging on the live version. Free database and API hosting comes with a price.<br>
+If you want to test the deployed version on Postman, the base url is https://astroturf.onrender.com (see the endpoint guide in step 3 below)
 
 ## Instructions for Local Deployment<br>
 1: [Clone the repository in IntelliJ](https://www.jetbrains.com/guide/tips/clone-from-github/).
