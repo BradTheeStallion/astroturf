@@ -5,7 +5,7 @@
 [Assignment Instructions](https://github.com/user-attachments/files/19438425/S4.Winter.2025.QAP.2.pdf)
 
 This project is primarily a Java backend, configuring a REST API to interact with a MySQL database. The project is also Dockerized for ease of deployment.<br>
-The app is configured to run on localhost:8080 when deployed locally (instructions below), but please feel free to check out the deployed version on my portfolio.<br>
+The app is configured to run on localhost:8080 when deployed locally (instructions below), but please feel free to check out the deployed version on my [portfolio](https://bradtheestallion.github.io/portfolio/astro-turf).<br>
 Please accept my appologies for any lagging on the live version. Free database and API hosting comes with a price.
 
 ## Instructions for Local Deployment<br>
